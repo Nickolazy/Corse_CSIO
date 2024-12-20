@@ -1,0 +1,192 @@
+/* Подключение шрифтов */
+@font-face {
+	font-family: 'Fira Sans';
+	src: url('../assets/fonts/FiraSans-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Sans';
+	src: url('../assets/fonts/FiraSans-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Sans';
+	src: url('../assets/fonts/FiraSans-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../assets/fonts/FiraSansCondensed-ExtraLight.woff2') format('woff2');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Глобальные переменные */
+:root {
+    --color-light: #FFFFFF;
+    --color-dark: #000000;
+    --color-banner-bg: #6D0088;
+    --color-page-bg: #F3F3F3;
+    --color-header-input-bg: #F1F1F1;
+    --color-orange: #FF4800;
+    --color-block-item-about-us: #EAD6DA;
+    --color-block-item-about-us-text: #430B51;
+    --color-footer-bg: #2A0433;
+
+    --container-width: 1720px;
+    --container-width-medium: 1440px;
+    --container-width-header: 1830px;
+    --container-padding-x: 15px;
+
+    --header-height: 85px;
+
+    --footer-height: 180px;
+
+    --font-fira-sans: 'Fira Sans', sans-serif;
+    --font-fira-sans-condensed: 'Fira Sans Condensed', sans-serif;
+
+    --transition-diration: 0.2s;
+
+    --border-radius: 10px;
+
+    --z-index-start: 1;
+    --z-index-medium: 10;
+    --z-index-big: 1000;
+
+    /* Drop windows */
+    --drop-window-max-width: 1160px;
+    --drop-window-max-height: 920px;
+    --drop-window-padding-inline: 60px;
+    --drop-window-padding-block: 40px;
+}
+
+/* Глобальные стили для тегов */
+body {
+    font-family: var(--font-fira-sans);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-diration);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-dark); 
+}
+
+/* Проприетарные классы */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.container-header {
+    max-width: calc(var(--container-width-header) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+.heading-one {
+    font-size: 84px;
+    font-weight: 500;
+    color: var(--color-light);
+    line-height: 1.1;
+}
+
+.heading-two {
+    font-size: 54px;
+    color: var(--color-light);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.heading-three {
+    font-size: 48px;
+    color: var(--color-light);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.heading-four {
+    font-size: 38px;
+    color: var(--color-light);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.banner-button-sing-up {
+    width: 390px;
+    height: 80px;
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 16px;
+    font-size: 28px;
+    color: var(--color-light);
+    font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+
+/* Нажатия кнопок */
+.button {
+    transition: transform 0.15s ease-in-out;
+
+    user-select: none;
+  }
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+}
+
+.teachers-item,
+.news-shares-item {
+    transition: transform 0.15s ease-in-out;
+}
+
+.courses-item:hover,
+.teachers-item:hover,
+.news-shares-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
